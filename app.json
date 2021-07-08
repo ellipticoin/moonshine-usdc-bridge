@@ -1,0 +1,57 @@
+{
+  "name": "Moonshine Blockchain Remittance Node",
+  "description": "Facilitates USDC Remittance between blockchains",
+  "keywords": [
+    "blockchain",
+    "moonshine"
+  ],
+  "website": "http://moonshine.exchange/",
+  "repository": "https://github.com/ellipticoin/moonshine-usdc-bridge",
+  "logo": "https://moonshine.exchange/static/media/logo.d5a83f30.svg",
+  "env": {
+    "PRIVATE_KEY_SEED": {
+      "required": false,
+      "description": "Seed used to generate the node's private key",
+      "generator": "secret"
+    },
+    "PRIVATE_KEY": {
+      "required": false,
+      "description": "Seed used to generate the node's private key",
+      "value": "49183a102c95d413b21c68a3c4850772b8695fc1f0809f98e3a2e51269f44409"
+    },
+    "OWNER_ADDRESS": {
+      "required": false,
+      "description": "The node owner's address"
+    },
+    "SNOWPACK_PUBLIC_TREASURY_CONTRACT_ADDRESS": {
+      "required": false,
+      "description": "The address of the treasury contract",
+      "value": "0x3D3e53D132Ba59c7E1BfF1F93f4591d36bE3419F"
+    },
+    "SNOWPACK_PUBLIC_BRIDGE_CONTRACT_ADDRESS": {
+      "required": false,
+      "description": "The address of the bridge contract",
+      "value": "0x16EFa78A6eB970C4b08b47ad95efceaa9903eac4"
+    },
+    "SNOWPACK_PUBLIC_FORIEGN_WEB3_URL": {
+      "required": false,
+       "value": "https://eth-rinkeby.gateway.pokt.network/v1/5f3453978e354ab992c4da79"
+    },
+    "SNOWPACK_PUBLIC_WEB3_URL": {
+      "required": false,
+       "value": "https://rpc-mumbai.maticvigil.com"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+
+  ]
+}
